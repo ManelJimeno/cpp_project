@@ -93,7 +93,9 @@ target_include_directories(${APPLICATION_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR
 
 # Setup Qt deployment and configure the installer
 setup_qt_deployment(${APPLICATION_NAME})
-configure_installer(${INSTALLER_NAME} ${APPLICATION_NAME})
+if(INVOICE_BUILD_INSTALLER)
+    configure_installer(${INSTALLER_NAME} ${APPLICATION_NAME})
+endif()
 
 if(APPLE)
     # Set target properties for macOS bundle
