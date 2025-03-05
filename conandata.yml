@@ -6,7 +6,7 @@ requirements:
   - "qt/6.7.3"
   - "fmt/11.0.2"
 build_requirements:
-  - "doxygen/1.9.4"
+  - "doxygen/1.13.2"
 options:
   - qt:
       - gui: True
